@@ -1,0 +1,239 @@
+/* ----------- body ----------- */
+
+.body{
+    padding: 0rem 2rem;
+    /* background-color: black; */
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+}
+
+/* ----------- main ----------- */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----------- principal-section ----------- */
+
+.principal-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.principal-section__h1{
+    font-size: 2.75rem;
+    position: relative;
+    width: max-content;
+}
+.principal-section__h1::before,
+.principal-section__h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.principal-section__h1::before {
+    background-color: black;
+    animation-name: typewriter;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(12);
+    animation-delay: 1s;
+    animation-fill-mode: forwards
+}
+.principal-section__h1::after {
+    width: 0.125em;
+    background: #F7FF00;
+    animation-name: typewriter, blink;
+    animation-duration: 1.5s, 750ms;
+    animation-timing-function: steps(12);
+    animation-delay: 1s, 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1, infinite;
+}
+.principal-section__p,
+.principal-section__img{
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+.principal-section__img_principal{
+    animation-name: fadeIn;
+    border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.principal-section__p,
+.principal-section__img_slide-down{
+    transform: translateY(3rem);
+    animation-name: fadeInUp;
+}
+.principal-section__p{
+    font-size: 1.5rem;
+}
+
+/* ----------- secundary-section -----------  */
+/* hacer un mix para ese margin-bottom */
+.secundary-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    /* max-width: 35rem; */
+    max-width: 37.5rem;
+}
+.secundary-section__h2{
+    font-size: 2rem;
+    background-image: linear-gradient(#F7FF00, #F7FF00);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 0.2rem;
+    display: inline-block;
+    transition-property: background-size;
+    transition-duration: 0.5s;
+    margin-bottom: 0.75rem;
+}
+.secundary-section__h2_visible{
+    background-size: 100% 0.2rem;
+}
+.secundary-section__p{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.secundary-section__ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.secundary-section__span{
+    color: #F7FF00;
+}
+.secundary-section__loader-div{
+    width: 100%;
+}
+
+/* ----------- project-card -----------  */
+
+.project-card{
+    width: 100%;
+    /*  */
+    max-width: 17.5rem;
+    /*  */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+    text-align: left;
+    cursor: pointer;
+    /* transition: box-shadow 0.25s, transform 0.25s; */
+    transition: transform 0.25s;
+}
+.project-card:hover{
+    transform:translateY(-0.5rem);
+}
+.project-card__img{
+    
+}
+.project-card__div{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.project-card__h3{
+    font-size: 1.75rem;
+    color: #F7FF00;
+}
+.project-card__p{
+    font-size: 1.25rem;
+}
+.project-card__ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ----------- contact-me-form -----------  */
+
+.contact-me-form{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 25rem;
+    gap: 1.5rem;
+    position: relative;
+}
+.contact-me-form__message-p_success{
+    color: greenyellow;
+}
+.contact-me-form__message-p_error{
+    color: red;
+}
+.contact-me-form__div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.contact-me-form__label{
+    width: 6rem;
+    font-size: 1.25rem;
+}
+.contact-me-form__loader-div{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-me-form__input,
+.contact-me-form__textarea{
+    flex-grow: 1;
+    border-bottom: #F7FF00 1px solid;
+    font-size: 1.25rem;
+}
+.contact-me-form__textarea{
+    resize: none;
+}
+.contact-me-form__button{
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    background-color: #F7FF00;
+    color: black;
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
+/* ----------- footer ----------- */
+
+.footer{
+    /* border: #F7FF00 1px solid; */
+    margin-bottom: 1rem;
+}
+.footer__img{
+    cursor: pointer;
+    width: 2rem;
+}
