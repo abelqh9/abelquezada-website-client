@@ -1,8 +1,13 @@
+/* ----------- variables ----------- */
+
+:root{
+    --yellow-color: #F7FF00;
+}
+
 /* ----------- body ----------- */
 
 .body{
-    padding: 0rem 2rem;
-    /* background-color: black; */
+    padding: 0rem 2rem 1rem;
     background-color: #000000;
     background-repeat: no-repeat;
     background-position: right;
@@ -36,6 +41,7 @@
     font-size: 2.75rem;
     position: relative;
     width: max-content;
+    color: var(--yellow-color);
 }
 .principal-section__h1::before,
 .principal-section__h1::after {
@@ -56,7 +62,7 @@
 }
 .principal-section__h1::after {
     width: 0.125em;
-    background: #F7FF00;
+    background: var(--yellow-color);
     animation-name: typewriter, blink;
     animation-duration: 1.5s, 750ms;
     animation-timing-function: steps(12);
@@ -89,6 +95,10 @@
     margin-bottom: 0.75rem;
 }
 
+.principal-section__img_slide-down:hover{
+    filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(6135%) hue-rotate(12deg) brightness(103%) contrast(132%);
+}
+
 /* ----------- social-medias ----------- */
 .social-medias{
     display: flex;
@@ -107,15 +117,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
     width: 100%;
-    /* max-width: 35rem; */
     max-width: 37.5rem;
 }
 .secundary-section__h2{
     font-size: 2rem;
-    background-image: linear-gradient(#F7FF00, #F7FF00);
+    padding-bottom: 0.35rem;
+    scroll-margin-block: 1rem;
+    background-image: linear-gradient(var(--yellow-color), var(--yellow-color));
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 0% 0.2rem;
@@ -141,7 +152,7 @@
     width: 100%;
 }
 .secundary-section__span{
-    color: #F7FF00;
+    color: var(--yellow-color);
 }
 .secundary-section__loader-div{
     width: 100%;
@@ -176,7 +187,7 @@
 }
 .project-card__h3{
     font-size: 1.75rem;
-    color: #F7FF00;
+    color: var(--yellow-color);
 }
 .project-card__p{
     font-size: 1.25rem;
@@ -214,6 +225,7 @@
 .contact-me-form__label{
     width: 6rem;
     font-size: 1.25rem;
+    color: var(--yellow-color);
 }
 .contact-me-form__loader-div{
     position: absolute;
@@ -228,7 +240,7 @@
 .contact-me-form__input,
 .contact-me-form__textarea{
     flex-grow: 1;
-    border-bottom: #F7FF00 1px solid;
+    border-bottom: var(--yellow-color) 1px solid;
     font-size: 1.25rem;
 }
 .contact-me-form__textarea{
@@ -237,8 +249,13 @@
 .contact-me-form__button{
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
-    background-color: #F7FF00;
+    background-color: var(--yellow-color);
     color: black;
     border-radius: 20px;
     align-self: flex-end;
+    border: 1px solid var(--yellow-color);
+}
+.contact-me-form__button:hover{
+    background-color: transparent;
+    color: var(--yellow-color);
 }
