@@ -94,6 +94,9 @@
     display: flex;
     gap: 1.5rem;
 }
+.social-medias__a{
+    width: 2rem;
+}
 .social-medias__a:hover{
     filter: brightness(0) saturate(100%) invert(90%) sepia(22%) saturate(6135%) hue-rotate(12deg) brightness(103%) contrast(132%);
 }
@@ -238,15 +241,4 @@
     color: black;
     border-radius: 20px;
     align-self: flex-end;
-}
-
-/* ----------- footer ----------- */
-
-.footer{
-    /* border: #F7FF00 1px solid; */
-    margin-bottom: 1rem;
-}
-.footer__img{
-    cursor: pointer;
-    width: 2rem;
 }
