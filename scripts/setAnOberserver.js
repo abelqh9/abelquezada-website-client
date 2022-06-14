@@ -5,7 +5,7 @@ export function setAnOberserver(elements, handler) {
                 handler(entry.target);
             }
         })
-    }, { threshold: '0.35' })
+    }, { rootMargin: '-10%' })
     
     elements.forEach(element => observer.observe(element));
 }
